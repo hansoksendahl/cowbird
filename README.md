@@ -12,6 +12,8 @@ Cowbird can operate as either a language recoginizer or as full-blown parser dep
 
 [Molcalc](http://molcalc.herokuapp.com) - molecular formula parser and molar mass calculator. **Warning: Science!**
 
+## Dissecting Cowbird
+
 Let's see what Cowbird is doing behind the scenes.
 
 Cowbird grammar definitions take the following form.
