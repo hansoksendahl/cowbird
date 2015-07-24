@@ -1,6 +1,6 @@
 # Cowbird
 
-![Cowbird Logo](https://photos-5.dropbox.com/t/2/AABQbU4U2iGweixVyMsICLLrXuNa-YZFbuyQBzsBcKGqwA/12/13291170/png/32x32/1/_/1/2/Cowbird.png/EIDg7wkYnpkFIAIoAg/nLs32o0nZV21NkN_Xk-oZJrQjtKlbV7wME4OhCIcX_w?size=1024x768&size_mode=2)
+![Cowbird Logo](https://www.dropbox.com/s/2lc6a5qlyyiq9l0/Cowbird.png?dl=0&raw=1)
 
 > The cowbird has a symbiotic relationship with venerable Bison.
 
