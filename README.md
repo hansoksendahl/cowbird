@@ -14,6 +14,33 @@ Cowbird can operate as either a language recoginizer or as full-blown parser dep
 
 Let's see what Cowbird is doing behind the scenes.
 
+Cowbird grammar definitions take the following form.
+
+```javascript
+var parser = new Grammar({ grammar }, startToken);
+```
+
+Where `grammar` is an object and `startToken` is a string.
+
+Each production in the grammar object is an array of regular expressions indexed by a non-terminal symbol.
+
+```javascript
+var parser = new Grammar({
+  "Message": [
+    /Cowbird is <Adjective>!/
+  ],
+  "Adjective": [
+    /awesome/,
+    /rad/,
+    /the bees knees/
+  ]
+}, "Message");
+```
+
+Non-terminal symbols can be referenced inside a production's alternate regular expressions by surrounding the non-terminal symbol name with brackets.
+
+Here is the grammar for the demo application.
+
 ```javascript
 var parser = new Grammar({
   "Substance": [
@@ -42,15 +69,6 @@ var parser = new Grammar({
   ]
 }, "Substance");
 ```
-
-Cowbird grammar definitions take the following form.
-
-```javascript
-var parser = new Grammar({ grammar }, startToken);
-```
-
-Where `grammar` is an object and `startToken` is a string.
-
 To parse our grammar we need only make a call to Cowbird's `parse` function.
 
 ```javascript
@@ -58,3 +76,5 @@ parser.parse("...");
 ```
 
 This will run our input through Cowbird's virtual machine using the defined grammar.
+
+For more information on Cowbird's internals please see the [Cowbird specification and user-manual](https://docs.google.com/document/d/1Bsgrna-Qpyk8gpX1LHe5O8slZV7SMet12jQZbpC2v2k/edit?usp=sharing).
