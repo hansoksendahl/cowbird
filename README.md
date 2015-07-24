@@ -19,7 +19,7 @@ Let's see what Cowbird is doing behind the scenes.
 Cowbird grammar definitions take the following form.
 
 ```javascript
-var parser = new Grammar({ grammar }, startToken);
+var parser = new Grammar(grammar, startToken);
 ```
 
 Where `grammar` is an object and `startToken` is a string.
