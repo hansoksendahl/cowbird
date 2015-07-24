@@ -11,3 +11,50 @@ Cowbird can operate as either a language recoginizer or as full-blown parser dep
 ## Demo
 
 [Molcalc](http://molcalc.herokuapp.com) - molecular formula parser and molar mass calculator. **Warning: Science!**
+
+Let's see what Cowbird is doing behind the scenes.
+
+```javascript
+var parser = new Grammar({
+  "Substance": [
+    /<Elements>/,
+    /<Multiplier> <Elements>/
+  ],
+  "Polymer": [
+    /\( <Elements> \)/,
+    /<this> <Multiplier>/,
+  ],
+  "Elements": [
+    /<Element>/,
+    /<Polymer>/,
+    /<this> <Element>/,
+    /<this> <Polymer>/,
+  ],
+  "Element": [
+    /<Atom>/,
+    /<this> <Multiplier>/,
+  ],
+  "Atom": [
+    /[A-Z][a-z]*/,
+  ],
+  "Multiplier": [
+    /[0-9]+/,
+  ]
+}, "Substance");
+```
+
+Cowbird grammar definitions take the following form.
+
+```javascript
+var parser = new Grammar({ grammar }, startToken);
+```
+
+Where `grammar` is an object and `startToken` is a string.
+
+To parse our grammar we need only make a call to Cowbird's `parse` function.
+
+```javascript
+parser.parse("...");
+```
+
+This will run our input through Cowbird's virtual machine using the defined grammar.
