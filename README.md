@@ -10,7 +10,7 @@ Cowbird can operate as either a language recoginizer or as full-blown parser dep
 
 ## Demo
 
-[Molcalc](http://molcalc.herokuapp.com) - molecular formula parser and molar mass calculator. **Warning: Science!**
+[Molcalc](http://hansoksendahl.github.io/molcalc) - molecular formula parser and molar mass calculator. **Warning: Science!**
 
 ## Dissecting Cowbird
 
