@@ -8,10 +8,6 @@ Cowbird is a scannerless LR(0)/LALR parser generator for JavaScript.  Cowbird en
 
 Cowbird can operate as either a language recoginizer or as full-blown parser depending on how a grammar is defined.
 
-## Demo
-
-[Molcalc](http://hansoksendahl.github.io/molcalc) - molecular formula parser and molar mass calculator. **Warning: Science!**
-
 ## Dissecting Cowbird
 
 Let's see what Cowbird is doing behind the scenes.
